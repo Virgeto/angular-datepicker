@@ -17,7 +17,8 @@
         'dateMonthTitle': '@',
         'dateYearTitle': '@',
         'buttonNextTitle': '@',
-        'buttonPrevTitle': '@'
+        'buttonPrevTitle': '@',
+        'startDay': '@'
       },
       'link': function linkingFunction($scope, element, attr) {
         //get child input
@@ -41,7 +42,7 @@
           , isMouseOnInput = false
           , datetime = $locale.DATETIME_FORMATS
           , pageDatepickers
-          , startDay = ""
+          , startDay = $scope.startDay || ""
           , htmlTemplate = '<div class="_720kb-datepicker-calendar" ng-blur="hideCalendar()">' +
           //month+year header
           '<div class="_720kb-datepicker-calendar-header" ng-hide="isMobile()">' +
